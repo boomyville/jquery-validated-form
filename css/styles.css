@@ -1,0 +1,38 @@
+/* Sent font for website */
+body {
+    width: 90%;
+    padding: 1rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+/* Make all <div> blocks stack vertically */
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Get rid of the padding so theres not excess white space */
+h2 {
+    margin: 0px;
+}
+
+/* Make nice font for form elements too */
+input, button, select {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Make everything within a div center */
+form > div, #title, #result, #message,  #conclusion {
+    display: grid;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+div#result > div {
+    justify-self: center;
+    padding: 1rem;
+}
+
+#question {
+    width: 100%;
+}

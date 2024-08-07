@@ -1,0 +1,64 @@
+<!-- Boilerplate generated using VSCode Emmet abbreviation-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/animation.js" defer></script>
+    <script src="js/pet_test.js" defer></script>
+    <script src="js/validation.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+</head>
+<body>
+<!-- Basic form stuff; we use POST because its more secure and we don't get ugly query strings in the URL -->
+<!-- We also use javascript to populate the contents of the form; makes it look nicer and allows me to apply my javascript knowledge -->
+<!-- The secocnd div will have a second form for registration details; it is hidden by default and shown when the first form is completed -->
+<!-- The last div is a modal that shows a success screen. It gets shown when registration is successful -->
+    <div id="container">
+        <div id="main">
+            <div id="title"><h2>Seek a Pet</h2>
+            </div>
+            <div id="survey" display="none">
+                <form method="POST"> 
+                    <div>
+                        <label for="question">Question:</label>
+                    </div>
+                    <div>
+                        <select id="question" name="option">
+                            <option value="0">Option 1</option>
+                            <option value="1">Option 2</option>
+                            <option value="2">Option 3</option>
+                        </select>
+                    </div>
+                    <div>
+                        <input id="petScore" type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+            <div id="result" display="none">
+                <div id="score">Hello</div>
+                <div id="recommendation">The recommendation</div>
+                <div><img src="" alt="Ideal Pet" id="image"></div>
+            </div>
+            <div id="message">
+                <div id="error"></div>
+            </div>
+            <div id="userForm" display="none">
+                <form method="POST">
+                    <div><label for="name">Name: </label><input type="text" name="name" id="name" placeholder="Name" required></div>
+                    <div><label for="age">Age: </label><input type="number" name="age" id="age" placeholder="Age" required></div>
+                    <div><label for="email">Email: </label><input type="email" name="email" id="email" placeholder="Email" required></div>
+                    <div><label for="phone">Phone number: </label><input type="tel" name="phone" id="phone" placeholder="Phone number"></div>
+                    <div><input id="adopt" type="submit" value="Submit"></div>
+                </form>
+            </div>
+            <div id="conclusion" display="none">
+                
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
