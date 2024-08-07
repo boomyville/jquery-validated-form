@@ -81,3 +81,22 @@ You are to implement **THREE image animations** using JQuery, as follows:
   - Display the score in a different color from the other 3.
   - Display a message indicating the ideal pet.
   - After the animation has displayed for 10 seconds, display the option to register.
+ 
+### User Registration
+
+Once the applicant receives a score, they are to be redirected or prompted to complete a registration form (after the image animation is complete). This registration form **MUST** include the following:
+
+#### Registration Form
+
+| Field         | Validation requirements                                                                                                                                                                                                 |
+|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Name**      | - MUST NOT be empty <br> - MUST be between 2 and 100 characters long <br> - MUST only contain characters a-z (upper and lower case), - (hyphen), whitespace or ' (apostrophe) <br> - Useful Regular Expression: `/^[a-zA-Z'-]+$/` |
+| **Age**       | - MUST NOT be empty <br> - MUST be an integer value between 18 and 130                                                                                                                                                   |
+| **Email**     | - MUST NOT be empty <br> - MUST be validated using an appropriate Regular Expression, e.g., `/^[a-zA-Z-]([\w-.]+)?@([\w-]+\.)+[\w]+$/`                                                                                   |
+| **Phone number** | - OPTIONAL: this field may be empty <br> - If provided: <br> &nbsp;&nbsp;&nbsp;&nbsp;- MUST be exactly 10 characters long <br> &nbsp;&nbsp;&nbsp;&nbsp;- MUST contain only digits (no letters or symbols) <br> &nbsp;&nbsp;&nbsp;&nbsp;- MUST start with 04 |
+
+If there is a problem with user input, an error message **MUST** be displayed for each problem. 
+- **HINT**: Create an error class and apply it to each error message.
+
+Once the user has provided valid input for all fields, display a success message.
+
